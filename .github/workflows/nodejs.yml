@@ -18,9 +18,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm run build --if-present
-    - run: npm install -g expo-cli
+    - run: npm install -g expo-cli react-native-cli
     - run: expo install
-    - run: npm install
     - run: react-native bundle — dev false — platform android — entry-file index.js — bundle-output ./android/app/build/intermediates/assets/ debug/ index.android.bundle –assets-dest ./android/app/build /intermediates /res/ merged/debug
     - run: cd android && ./gradlew assembleDebug
       env:
