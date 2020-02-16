@@ -20,7 +20,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm install -g expo-cli react-native-cli
     - run: expo install
-    - run: react-native bundle — dev false — platform android — entry-file index.js — bundle-output ./android/app/build/intermediates/assets/ debug/ index.android.bundle –assets-dest ./android/app/build /intermediates /res/ merged/debug
+    - run: react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
     - run: cd android && ./gradlew assembleDebug
       env:
         CI: true
