@@ -10,7 +10,6 @@ Launch:
 	```make```
 	
 Logs:
-
 	```make logs```
 
 Stop:
