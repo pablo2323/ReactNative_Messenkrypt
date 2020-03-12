@@ -20,6 +20,8 @@ RUN expo install
 # Install dep
 RUN npm install -i
 
-CMD ["npm", "run", "start"]
+RUN expo login -u loiu92.com -p vZTQU9uqqVWCvzxbad2T3828T8UWrWgYRej3pQXtweQ27CyS3ce7Zn3TqTit6pzvETeivzF6WdsRkkCXWptEJknjCM2qNN63gyZ7DjUhGbHmQsychoMwfYyo2ceAXCWU
 
-#CMD ["pm2-runtime", "config/dev.config.js", "--watch"]
+CMD ["npm", "run", "web"]
+#CMD ["expo", "build:android"]
+

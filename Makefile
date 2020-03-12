@@ -16,6 +16,9 @@ stop:
 	$(DC) stop
 clean:
 	$(DC) down
+
+re: clean start
+
 tree:
 	@tree | sed 's/├/\+/g; s/─/-/g; s/└/\\/g'
 logs:

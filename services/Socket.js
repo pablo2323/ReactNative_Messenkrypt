@@ -14,8 +14,8 @@ export default class Socket {
         });
     }
 
-    register(username: string, publicKey: string) {
-        this.socket.emit("user:register", username, publicKey);
+    async register(username: string, publicKey: string) {
+        await this.socket.emit("user:register", username, publicKey);
     }
 
      async login(username: string, password: string) {
@@ -30,15 +30,15 @@ export default class Socket {
         await this.socket.emit("product:list", "");
     }
 
-     async getServerAnswer(url: string) {
+     async getServerAnswer(event: string) {
          let socket = this.socket;
          return new Promise(function (resolve, reject) {
-             socket.on(url + ":success", function(data){
-                 console.log(url + " :success : " + JSON.stringify(data));
+             socket.on(event + ":success", function(data){
+                 console.log(event + " :success : " + JSON.stringify(data));
                  resolve(data);
              });
              socket.on(url + ":err", function(err){
-                 console.log(url + " err: " + err);
+                 console.log(event + " err: " + err);
                  resolve(err);
              });
          })

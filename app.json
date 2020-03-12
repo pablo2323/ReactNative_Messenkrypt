@@ -13,7 +13,7 @@
     "orientation": "portrait",
     "icon": "./assets/ic_launcher_beta-web.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ic_launcher_beta-web.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,6 +25,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.messenkrypt.native"
     }
   }
 }
