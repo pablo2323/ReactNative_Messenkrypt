@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "after": "^0.8.2",
@@ -30,12 +32,12 @@
     "redux-thunk": "^2.3.0",
     "socket.io-client": "^2.1.1",
     "expo-permissions": "latest",
-    "expo-camera": "latest"
+    "expo-camera": "latest",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
-    "babel-preset-expo": "^7.1.0",
-    "snyk": "^1.290.2"
+    "babel-preset-expo": "^7.1.0"
   },
-    "private": true,
-    "snyk": true
+  "private": true,
+  "snyk": true
 }
