@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "after": "^0.8.2",
-    "expo": "^35.0.0",
+    "expo": "^39.0.1",
     "expo-font": "^7.0.0",
     "hoist-non-react-statics": "^3.3.0",
     "native-base": "^2.13.8",
